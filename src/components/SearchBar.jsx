@@ -4,14 +4,11 @@ import { CiSearch } from "react-icons/ci";
 import { DarkModeProvider, useDarkMode } from '../DarkModeContext';
 import { CountriesContext, useCountries } from '../CountriesContext';
 import CountriesList from './CountriesList';
-const SearchBar = () => {
-  const { countries, loading, error} = useCountries();
 
-  const [searchCountries, setSearchCountries] = useState("");
+const SearchBar = ({searchCountries, setSearchCountries}) => {
+  const { countries, loading, error} = useCountries();
   // const finalFilter = countries.filter(item => item.name.common==searchCountries);
-  const finalFilter = countries.filter(item =>
-    item.name.common.toLowerCase().includes(searchCountries.toLowerCase())
-  );
+
   
   const { darkmode } = useDarkMode();
   return (
@@ -26,7 +23,7 @@ const SearchBar = () => {
               }} value={searchCountries} className={`w-full outline-none`} type='text' placeholder={'Search for a country...'} />
         </div>
     </div>
-    <CountriesList isSearchBar={true} isHomePage={false} error={error} loading={loading} countries = {finalFilter} />
+    {/* <CountriesList isSearchBar={true} isHomePage={false} error={error} loading={loading} countries = {finalFilter} /> */}
     </div>
 )
 }
