@@ -17,19 +17,19 @@ const CountryDetails = () => {
   if (!country) return <div>Country not found</div>;
 
   return (
-    <div className={`block ${darkmode ? 'bg-gray-900 text-white' : ''}`}>
+    <div className={`block p-5 ${darkmode ? 'bg-gray-900 text-white' : ''}`}>
       <div className='md:flex w-full md:items-stretch shadow-lg pb-20'>
         {/* Left Part - Image */}
-        <div className='md:w-1/2 p-[25px]'>
+        <div className='md:w-1/2 p-2'>
           <img
-            className='md:w-full md:h-full'
+            className='md:w-full w-full md:h-full'
             src={country.flags.png}
             alt={country.flags.alt}
           />
         </div>
 
         {/* Right Part - Content */}
-        <div className='md:w-1/2 md:flex md:flex-col md:justify-center md:h-full'>
+        <div className='p-3 md:w-1/2 md:flex md:flex-col md:justify-center md:h-full'>
           {/* Part - A */}
           <div className='text-[30px] mb-6'>
             <strong>{country.name.common}</strong>
