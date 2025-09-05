@@ -3,7 +3,7 @@ import React from 'react'
 import CountriesCard from './CountriesCard';
 import DarkModeContext, { useDarkMode } from '../DarkModeContext';
 
-const CountriesList = ({isHomePage, countries, error, loading}) => {
+const CountriesList = ({isSearchBar, filterbar, isHomePage, countries, error, loading}) => {
     // const {countries, loading, error } = useCountries();
     const displayCountries = countries.slice(0,8);
 

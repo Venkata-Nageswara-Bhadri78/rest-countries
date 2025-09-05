@@ -17,7 +17,7 @@ const HomePage = () => {
                 <Header />
                 <div className={`${darkmode ? 'bg-gray-900' : 'bg-white'} md:flex md:justify-between`}>
                     <SearchBar />
-                    <FilterBar countries={countries}/>
+                    {/* <FilterBar error={error} loading={loading} countries={countries}/> */}
                 </div>
                 <CountriesList error={error} loading={loading} countries={countries} isHomePage={true}/>
             </div>

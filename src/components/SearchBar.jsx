@@ -26,7 +26,7 @@ const SearchBar = () => {
               }} value={searchCountries} className={`w-full outline-none`} type='text' placeholder={'Search for a country...'} />
         </div>
     </div>
-    <CountriesList isHomePage={false} error={error} loading={loading} countries = {finalFilter} />
+    <CountriesList isSearchBar={true} isHomePage={false} error={error} loading={loading} countries = {finalFilter} />
     </div>
 )
 }
