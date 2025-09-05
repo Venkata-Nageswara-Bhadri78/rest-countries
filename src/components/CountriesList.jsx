@@ -1,10 +1,10 @@
 import React from 'react'
-import { useCountries } from '../CountriesContext'
+// import { useCountries } from '../CountriesContext'
 import CountriesCard from './CountriesCard';
 import DarkModeContext, { useDarkMode } from '../DarkModeContext';
 
-const CountriesList = (isHomePage) => {
-    const {countries, loading, error } = useCountries();
+const CountriesList = ({isHomePage, countries, error, loading}) => {
+    // const {countries, loading, error } = useCountries();
     const displayCountries = countries.slice(0,8);
 
     const { darkmode } = useDarkMode();

@@ -19,7 +19,7 @@ const HomePage = () => {
                     <SearchBar />
                     <FilterBar countries={countries}/>
                 </div>
-                <CountriesList isHomePage={true}/>
+                <CountriesList error={error} loading={loading} countries={countries} isHomePage={true}/>
             </div>
         </>
     )
